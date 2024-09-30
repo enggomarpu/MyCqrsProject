@@ -11,6 +11,8 @@ namespace Catalog.Domain.Interfaces
 	{
 		Task<Product?> GetByIdAsync(int id);
 
+		Task<IEnumerable<Product>> ListAllAsync();
+		Task<IEnumerable<Product>> ListAllAsyncWithInclude();
 		void Add(Product product);
 	}
 }

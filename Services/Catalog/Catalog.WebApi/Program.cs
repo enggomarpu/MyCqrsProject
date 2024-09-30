@@ -1,3 +1,4 @@
+using Catalog.Application.Extensions;
 using Catalog.Infrastructure.Data;
 using Catalog.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplictionServices();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

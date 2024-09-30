@@ -23,7 +23,7 @@ namespace Catalog.Infrastructure.Data
 			return await _context.Set<T>().FindAsync(id);
 		}
 
-		public async Task<IReadOnlyList<T>> ListAllAsync()
+		public async Task<IEnumerable<T>> ListAllAsync()
 		{
 			return await _context.Set<T>().ToListAsync();
 		}

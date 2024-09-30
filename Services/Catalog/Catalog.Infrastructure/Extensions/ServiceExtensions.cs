@@ -14,6 +14,7 @@ namespace Catalog.Infrastructure.Extensions
 			services.AddDbContext<AppCatalogContext>(opts => opts.UseSqlServer(config.GetConnectionString("sqlConnection")));
 			services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<AppCatalogContext>());
 			//services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+			services.AddScoped<IProductRepository, ProductRepository>();
 			//services.AddScoped<IProductRespository, ProductRepository>();
 
 		}
